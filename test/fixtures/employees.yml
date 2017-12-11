@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo: 1
+  nombre: MyString
+  apellido: MyString
+  contrase«Òa: MyString
+  area: MyString
+
+two:
+  codigo: 1
+  nombre: MyString
+  apellido: MyString
+  contrase«Òa: MyString
+  area: MyString

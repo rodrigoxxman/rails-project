@@ -1,0 +1,37 @@
+<style type="text/css">
+        body{
+          background-image: url('https://cdn.vox-cdn.com/uploads/chorus_asset/file/8071791/One_Vanderbilt_rendering.jpg')
+        }
+        #centro{
+          text-align: center;    
+        }
+          </style>
+          <div class="centro">
+<h2>Iniciar Sesión</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, "Contraseña" %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+ <div class="actions">
+    <a href="../startup/index">
+    <%= f.submit "Iniciar", class: "btn btn-success" %></a>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</div>

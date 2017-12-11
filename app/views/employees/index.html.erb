@@ -1,0 +1,48 @@
+<nav class="navbar" style="background-color: black; color: white;">
+<span class="navbar-text">
+   <a href="../welcome/index"><button class="btn btn-dark">Cerrar Sesión</button></a>
+
+</span>
+</nav>
+
+<br>
+<br>
+<div class="row">
+<div class="col-sm-8">
+<h1>Usuarios registrados</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
+    <th scope="col">Área</th>
+    <th colspan="3">Código</th>
+  </tr>
+ </thead>
+
+ <tbody>
+  <% @employees.each do |employee| %>
+    <tr>
+      <td><%= employee.nombre %></td>
+      <td><%= employee.apellido %></td>
+      <td><%= employee.area%></td>
+      <td><%= employee.codigo%></td>
+      <td><%= link_to 'Mostrar', employee_path(employee),  class: "btn btn-primary" %></td>
+  
+       <td ><%= link_to 'Editar', edit_employee_path(employee), class: "btn btn-info"%></td>
+       
+       <td>
+       <%= link_to 'Borrar', employee_path(employee),
+              method: :delete,
+              data: { confirm: 'Estás seguro de querer eliminar a este usuario?' },  class: "btn btn-danger"%>
+
+          </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
+<button class="btn btn-warning"><%= link_to 'Nuevo Usuario', new_employee_path %></button>
+</div>
+
+</div>

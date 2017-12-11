@@ -1,0 +1,58 @@
+<%= form_with model: @employee, local: true do |form| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation" style="background: #848484; color: white; border-radius: 15px; padding: 20px; margin-right: 30px;">
+      <h2>
+        <%= pluralize(@employee.errors.count, "error") %> prohibited
+        this employee from being saved:
+      </h2>
+      <ul>
+        <% @employee.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="row">
+<br>
+ <div class="col-sm-2">
+  <center>
+    <%= form.label :Nombres %>
+    <br>
+    <br>
+    <%= form.label :Apellidos %>
+    <br>
+    <br>
+    <%= form.label :Código %>
+    <br>
+    <br>
+    <%= form.label :Contraseña %>
+    <br>
+    <br>
+    <%= form.label :Área %>
+    </center>
+  </div>
+    <div class="col-sm-10">
+    <div style="margin-right: 30px;">
+
+    <%= form.text_field :nombre, class:"form-control", placeholder:"Nombre" %>
+    <br>
+    <%= form.text_field :apellido, class:"form-control", placeholder:"Apellidos"%>
+     <br>
+   <%= form.text_field  :codigo, class:"form-control", placeholder:"Código"%>
+    <br>
+   <%= form.password_field :contrasena, class:"form-control", placeholder:"Contraseña"%>
+      <br>
+   <%= form.text_field  :area, class:"form-control", placeholder:"Área"%>
+   <br>
+
+  </div>
+</div>
+<br>
+<br>
+</div>
+<br>
+<p>
+<%= form.submit%>
+ </p>
+<% end %>
+

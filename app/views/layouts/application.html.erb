@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Línea 1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+   <link rel="stylesheet" href="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/css/stylish-portfolio.css">
+    <style type="text/css">
+        body{
+          background-image: url('https://cdn.vox-cdn.com/uploads/chorus_asset/file/8071791/One_Vanderbilt_rendering.jpg')
+        }
+        </style>
+  </head>
+
+  <body>
+ <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> 
+    
+   
+    <%= yield %>
+
+     <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            <h4>
+              <strong>LÍNEA 1</strong>
+            </h4>
+            <p>Jr. Solidaridad Cdr. 8 s/n - Parque Industrial
+              <br>Villa el Salvador - Oficinas Administrativas:</p>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                (01) 207-2900</li>
+              <li>
+                <i class="fa fa-envelope-o fa-fw"></i>
+                <a href="mailto:name@example.com">atracciondeltalento@gym.com.pe</a>
+              </li>
+            </ul>
+            <br>
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/Lineauno.pe">
+                  <i class="fa fa-facebook fa-fw fa-3x"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://twitter.com/Lineaunope">
+                  <i class="fa fa-twitter fa-fw fa-3x"></i>
+                </a>
+              </li>
+            </ul>
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; AATE 2017</p>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  </body>
+<script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/js/stylish-portfolio.js"></script>
+<script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://blackrockdigital.github.io/startbootstrap-stylish-portfolio/vendor/jquery/jquery.min.js"></script>
+</html>
+

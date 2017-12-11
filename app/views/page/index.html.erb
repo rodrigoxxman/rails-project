@@ -1,0 +1,12 @@
+  <div align="center">
+       <img src="http://www.lineauno.pe/media/images/banner/trabaja-con-nosotros-lineauno.jpg" width="700" height="230">
+      </div>
+      <button class="btn btn-dark">
+<%= link_to "Cerrar Sesión", logout_path %></button>
+<h1>Datos del usuario</h1>
+
+<p>Bienvenido <%= current_user.nombre%></p>
+<p>APELLIDOS: <%= current_user.apellido%></p>
+<p>ÁREA DE TRABAJO: <%= current_user.area%></p>
+<p>CÓDIGO: <%= current_user.codigo%></p>
+
